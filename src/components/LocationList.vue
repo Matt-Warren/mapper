@@ -25,23 +25,23 @@
         </v-list-tile>
         <v-divider></v-divider>
       </v-list>
-      <v-expansion-panel expand class="locationAdder">
-        <v-expansion-panel-content>
-          <div slot="header">Add a Location</div>
-          <v-card class="addLocation">
-            <v-text-field name="newLocation" label="Location Name" id="newLocation" color="success" required v-model="newLocationName"></v-text-field>
-            <v-icon v-if="pinSelected" large @click.stop="selectPin()" color="green darken-2">pin_drop</v-icon>
-            <v-icon v-else-if="!pinSelected" large @click.stop="selectPin()" color="default">pin_drop</v-icon>
 
-            <v-icon v-if="areaSelected" large @click.stop="selectArea()" color="green darken-2">photo_size_select_small</v-icon>
-            <v-icon v-else-if="!areaSelected" large @click.stop="selectArea()" color="default">photo_size_select_small</v-icon>
-
-            <v-btn color="success" left @click.stop="addNewLocation()">Add Location</v-btn>
-          </v-card>
-        </v-expansion-panel-content>
-      </v-expansion-panel>
     </v-navigation-drawer>
+    <v-expansion-panel expand class="locationAdder">
+      <v-expansion-panel-content>
+        <div slot="header">Add a Location</div>
+        <v-card class="addLocation">
+          <v-text-field name="newLocation" label="Location Name" id="newLocation" color="success" required v-model="newLocationName"></v-text-field>
+          <v-icon v-if="pinSelected" large @click.stop="selectPin()" color="green darken-2">pin_drop</v-icon>
+          <v-icon v-else-if="!pinSelected" large @click.stop="selectPin()" color="default">pin_drop</v-icon>
 
+          <v-icon v-if="areaSelected" large @click.stop="selectArea()" color="green darken-2">photo_size_select_small</v-icon>
+          <v-icon v-else-if="!areaSelected" large @click.stop="selectArea()" color="default">photo_size_select_small</v-icon>
+
+          <v-btn color="success" left @click.stop="addNewLocation()">Add Location</v-btn>
+        </v-card>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
   </v-layout>
 </template>
 
@@ -107,7 +107,7 @@ export default {
   flex-direction: column;
 }
 .locationAdder {
-  position: fixed;
+  position: relative;
   bottom: 0;
   right: 0;
 }
