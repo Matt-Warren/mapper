@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
+import VueClip from 'vue-clip'
 import 'vuetify/dist/vuetify.min.css'
 
 Vue.config.productionTip = false
@@ -16,6 +17,8 @@ Vue.use(Vuetify, {
     error: '#b71c1c'
   }
 })
+
+Vue.use(VueClip)
 
 /* eslint-disable no-new */
 new Vue({
