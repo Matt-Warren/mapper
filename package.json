@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "mdi": "^2.2.43",
+    "v-viewer": "^1.0.1",
     "vue": "^2.5.2",
     "vue-clip": "^1.0.0",
     "vue-router": "^3.0.1",

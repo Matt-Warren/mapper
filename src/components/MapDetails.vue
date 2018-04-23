@@ -13,7 +13,7 @@
     <v-tabs-items v-model="tabs" height="800px">
       <v-tab-item :key="1">
         <v-card flat height="600px" class="tab-card elevation-10">
-          <v-text-field multi-line no-resize rows="10" color="accent">
+          <v-text-field multi-line no-resize rows="22" color="accent">
           </v-text-field>
         </v-card>
       </v-tab-item>

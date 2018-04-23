@@ -5,7 +5,9 @@ import App from './App'
 import router from './router'
 import Vuetify from 'vuetify'
 import VueClip from 'vue-clip'
+import Viewer from 'v-viewer'
 import 'vuetify/dist/vuetify.min.css'
+import 'viewerjs/dist/viewer.css'
 
 Vue.config.productionTip = false
 
@@ -19,6 +21,7 @@ Vue.use(Vuetify, {
 })
 
 Vue.use(VueClip)
+Vue.use(Viewer)
 
 /* eslint-disable no-new */
 new Vue({

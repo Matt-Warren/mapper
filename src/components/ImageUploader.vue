@@ -1,9 +1,9 @@
 <template>
-  <vue-clip :options="options" color="accent">
+  <vue-clip :options="options" color="accent" style="height: '100%'">
     <template slot="clip-uploader-action">
-      <div>
+      <v-card height="100%" class="pt-5">
         <div class="dz-message"><h2> Click or Drag and Drop files here upload </h2></div>
-      </div>
+      </v-card>
     </template>
 
     <template slot="clip-uploader-body" slot-scope="props">
@@ -22,8 +22,16 @@ export default {
   data () {
     return {
       options: {
-        url: '/upload',
-        paramName: 'file'
+        url: 'http://localhost:8081/upload',
+        paramName: 'map',
+        maxFiles: {
+          limit: 1,
+          message: 'You can only upload 1 file.'
+        },
+        acceptedFiles: {
+          extensions: ['image/*'],
+          message: 'You are uploading an invalid file'
+        }
       }
     }
   }
@@ -32,4 +40,7 @@ export default {
 </script>
 
 <style scoped>
+.imageUploader {
+  margin: "10px";
+}
 </style>
